@@ -4,8 +4,11 @@ const bookRoutes = require('./src/routes/books');
 const app = express()
 require('dotenv').config();
 const authRoutes = require('./src/routes/auth');
+const cors = require('cors');
 
 app.use(express.json());
+
+app.use(cors());
 
 
 const port = 3001
